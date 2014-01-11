@@ -1,6 +1,5 @@
-#!/usr/bin/perl -W
-package stealth::individual;
-
+#!/usr/bin/perl
+package stealth::individual; 
 use strict;
 use warnings;
 use Data::Dumper;
@@ -59,7 +58,7 @@ sub create {
     return $p;
 	
 }
-#print Dumper create();
+print Dumper create();
 
 1;
 #Abstract

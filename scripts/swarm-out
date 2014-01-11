@@ -29,13 +29,13 @@ our  $indev = stealth::individual->new();
 
 
 generate_task_number_n(1);
-my $MAX = 100;
+my $MAX = 1000;
 
 my %results;
 
 #	warn "creating doc";
 run_queue(
-           Trace => 1,
+           Trace => 0,
           KidMax => 10,
           KidTask => sub {
 
@@ -66,7 +66,7 @@ run_queue(
            );
 
 for (sort keys %results) {
-#  print "$_ => $results{$_}";
+  print "$_ => $results{$_}";
 }
     # ABSTRACT: turns baubles into trinkets
 
@@ -105,7 +105,7 @@ BEGIN {                         # task manager
 
 BEGIN {                         # kid manager
   my %kids;
-  my $kid_max = 10;
+  my $kid_max = 100;
   my $kid_task;
   my $result_task;
   my $trace = 1;
