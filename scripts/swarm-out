@@ -1,9 +1,7 @@
-package stealth::swarm;
-#ABSTRACT
 use Data::Dumper;
 use JSON::XS;
 use Env qw/PWD/;
-use stealth::individual;
+use Stealth::Swarm;
 $|++;
 
 $SIG{__WARN__} = sub {
